@@ -23,7 +23,18 @@ pub mod store_path;
 
 // Re-export the most commonly used items at the crate root for convenience.
 pub use hash::{
-    compress_hash, hash_bytes, hash_sha256, hash_string, parse_sri, to_sri, HashAlgorithm,
+  HashAlgorithm,
+  compress_hash,
+  hash_bytes,
+  hash_sha256,
+  hash_string,
+  parse_sri,
+  to_sri,
 };
 pub use nix32::Nix32;
-pub use store_path::{check_name, output_path_name, FileIngestionMethod, StoreDir};
+pub use store_path::{
+  FileIngestionMethod,
+  StoreDir,
+  check_name,
+  output_path_name,
+};
