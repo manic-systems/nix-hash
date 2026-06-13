@@ -342,9 +342,7 @@ mod tests {
   #[test]
   fn known_derivation_path_produces_valid_output() {
     let sd = StoreDir::default();
-    let drv_aterm = "Derive([(\"out\",\"/nix/store/\
-                     d3dyc8y0vkqh4khsliq89zw6c5g0nqwz-test\",\"\",\"\")],[],[\\
-                     "/bin/sh\"],\"x86_64-linux\",\"\",[]]";
+    let drv_aterm = "Derive([(\"out\",\"/nix/store/d3dyc8y0vkqh4khsliq89zw6c5g0nqwz-test\",\"\",\"\")],[],[\"/bin/sh\"],\"x86_64-linux\",\"\",[]]";
     let content_hash =
       crate::hash::hash_string(HashAlgorithm::Sha256, drv_aterm);
     let suffix = "test.drv";
